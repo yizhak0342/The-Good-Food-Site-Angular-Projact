@@ -1,0 +1,30 @@
+.aboutdiv{
+    width: 500px;
+    height: 300px;
+    float: left;
+    margin-top:80px;
+    margin-left: -150px;
+  }
+  .alldiv{
+    width: 100%;
+    height: 450px;
+    margin-left: 100px;
+    margin-top: 80px;
+    background-color:transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+  }
+  .imageabout{
+    font-family: tahoma;
+    background-image: url(http://smile-nehasim.co.il/wp-content/uploads/2017/08/IMG_20170830_100356.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 600px;
+    margin-top: 90px;
+    margin-right: 40px;
+    float: right;
+  }
+
+  @media screen and (max-width:900px){
+    
+  }

@@ -1,0 +1,253 @@
+<div id="collapsall">
+    <div id="accordion" class="panel-group">
+         <!-- Italian Restaurants -->
+        <div class="panel panel-primary">
+            <div id="headline" class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#panelBodyOne" data-toggle="collapse" data-parent="#accordion">
+                        Italian Restaurants
+                    </a>
+                </h4>
+            </div>
+            <div id="panelBodyOne" class="panel-collapse collapse in">
+                <div id="bodytop10" class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>Index</th>
+                                <th>Restaurant's Name</th>
+                                <th>Area</th>
+                                <th>Score</th>
+                                <th>Make reservation</th>
+                            </tr>
+                            <tr *ngFor="let item of ArTop10 | async | filter:'Italian restaurant' ; let i = index">
+                                <td>{{ i+1 }}</td>
+                                <td> {{item.Name}}</td>
+                                <td> {{item.Location}}</td>
+                                <td class="glyphicon glyphicon-thumbs-up"> {{item.Rating}}</td>
+                                <td><a href="{{item.Reservations}}">הזמנת שולחן</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Meat / beef -->
+        <div class="panel panel-primary">
+            <div id="headline" class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#panelBodyTwo" data-toggle="collapse" data-parent="#accordion">
+                            Meat / beef
+                    </a>
+                </h4>
+            </div>
+            <div id="panelBodyTwo" class="panel-collapse collapse">
+                <div id="bodytop10" class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>Index</th>
+                                <th>Restaurant's Name</th>
+                                <th>Area</th>
+                                <th>Score</th>
+                                <th>Make reservation</th>
+                            </tr>
+                            <tr *ngFor="let item of ArTop10 | async | filter:'Meat/beef' ; let i = index">
+                                <td>{{i+1}}</td>
+                                <td> {{item.Name}}</td>
+                                <td> {{item.Location}}</td>
+                                <td class="glyphicon glyphicon-thumbs-up"> {{item.Rating}}</td>
+                                <td><a href="{{item.Reservations}}">הזמנת שולחן</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Asians -->
+        <div class="panel panel-primary">
+            <div id="headline" class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#panelBodyThree" data-toggle="collapse" data-parent="#accordion">
+                        Asians
+                    </a>
+                </h4>
+            </div>
+            <div id="panelBodyThree" class="panel-collapse collapse">
+                <div id="bodytop10" class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>Index</th>
+                                <th>Restaurant's Name</th>
+                                <th>Area</th>
+                                <th>Score</th>
+                                <th>Make reservation</th>
+                            </tr>
+                            <tr *ngFor="let item of ArTop10 | async | filter : 'Asian'; let i = index">
+                                <td>{{i+1}}</td>
+                                <td> {{item.Name}}</td>
+                                <td> {{item.Location}}</td>
+                                <td class="glyphicon glyphicon-thumbs-up"> {{item.Rating}}</td>
+                                <td><a href="{{item.Reservations}}">הזמנת שולחן</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Coffee Houses -->
+        <div class="panel panel-primary">
+            <div id="headline" class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#panelBody4" data-toggle="collapse" data-parent="#accordion">
+                            Coffee Houses
+                        </a>
+                </h4>
+            </div>
+            <div id="panelBody4" class="panel-collapse collapse">
+                <div id="bodytop10" class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>#Rank</th>
+                                <th>Restaurant's Name</th>
+                                <th>Area</th>
+                                <th>Score</th>
+                                <th>Make reservation</th>
+                            </tr>
+                            <tr *ngFor="let item of ArTop10 | async | filter: 'Coffee houses'; let i = index">
+                                <td>{{i+1}}</td>
+                                <td> {{item.Name}}</td>
+                                <td> {{item.Location}}</td>
+                                <td class="glyphicon glyphicon-thumbs-up"> {{item.Rating}}</td>
+                                <td><a href="{{item.Reservations}}">הזמנת שולחן</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Chef Restaurants -->
+        <div class="panel panel-primary">
+            <div id="headline" class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#panelBody5" data-toggle="collapse" data-parent="#accordion">
+                                Chef Restaurants
+                            </a>
+                </h4>
+            </div>
+            <div id="panelBody5" class="panel-collapse collapse">
+                <div id="bodytop10" class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>Index</th>
+                                <th>Restaurant's Name</th>
+                                <th>Area</th>
+                                <th>Score</th>
+                                <th>Make reservation</th>
+                            </tr>
+                            <tr *ngFor="let item of ArTop10 | async | filter: 'Chef restaurants'; let i = index">
+                                <td>{{i+1}}</td>
+                                <td> {{item.Name}}</td>
+                                <td> {{item.Location}}</td>
+                                <td class="glyphicon glyphicon-thumbs-up"> {{item.Rating}}</td>
+                                <td><a href="{{item.Reservations}}">הזמנת שולחן</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Fish & Sea Foods -->
+        <div class="panel panel-primary">
+            <div id="headline" class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#panelBody6" data-toggle="collapse" data-parent="#accordion">
+                        Fish & Sea Foods
+                    </a>
+                </h4>
+            </div>
+            <div id="panelBody6" class="panel-collapse collapse">
+                <div id="bodytop10" id="bodytop10" class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>Index</th>
+                                <th>Restaurant's Name</th>
+                                <th>Area</th>
+                                <th>Score</th>
+                                <th>Make reservation</th>
+                            </tr>
+                            <tr *ngFor="let item of ArTop10 | async | filter: 'Fish & sea foods'; let i = index">
+                                <td>{{i+1}}</td>
+                                <td> {{item.Name}}</td>
+                                <td> {{item.Location}}</td>
+                                <td class="glyphicon glyphicon-thumbs-up"> {{item.Rating}}</td>
+                                <td><a href="{{item.Reservations}}">הזמנת שולחן</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Veggies -->
+        <div class="panel panel-primary">
+            <div id="headline" class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#panelBody7" data-toggle="collapse" data-parent="#accordion">
+                            Veggies
+                        </a>
+                </h4>
+            </div>
+            <div id="panelBody7" class="panel-collapse collapse">
+                <div id="bodytop10" class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>Index</th>
+                                <th>Restaurant's Name</th>
+                                <th>Area</th>
+                                <th>Score</th>
+                                <th>Make reservation</th>
+                            </tr>
+                            <tr *ngFor="let item of ArTop10 | async | filter: 'Veggies'; let i = index">
+                                <td>{{i+1}}</td>
+                                <td> {{item.Name}}</td>
+                                <td> {{item.Location}}</td>
+                                <td class="glyphicon glyphicon-thumbs-up"> {{item.Rating}}</td>
+                                <td><a href="{{item.Reservations}}">הזמנת שולחן</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sideerea">
+    <div class="side-menu">
+        <ul>
+            <li style="font-weight:bold; color:#e67e22; font-size:25px;text-decoration: underline;">Category</li>
+            <li><a (click)="routeDynamically('Italian')"> Italian restaurants</a></li>
+            <li><a (click)="routeDynamically('Meat')">Meat / beef</a></li>
+            <li><a (click)="routeDynamically('Asians')">Asians</a></li>
+            <li><a (click)="routeDynamically('Coffee')">Coffee Houses</a></li>
+            <li><a (click)="routeDynamically('Chef')">Chef Restaurants</a></li>
+            <li><a (click)="routeDynamically('Fish')">Fish & Sea Foods</a></li>
+            <li><a (click)="routeDynamically('Veggies')">Veggies</a></li>
+        </ul>
+    </div>
+    <div class="erea">
+        <ul>
+            <li style="font-weight:bold; color:#e67e22; font-size:25px;text-decoration: underline;">Areas</li>
+            <li><a (click)="routeDynamically('North')">North</a></li>
+            <li><a (click)="routeDynamically('Hasharon')">Hasharon</a></li>
+            <li><a (click)="routeDynamically('Hamerkaz')">Hamerkaz</a></li>
+            <li><a (click)="routeDynamically('Hashfela')">Hashfela</a></li>
+            <li><a (click)="routeDynamically('Jerusalem')">Jerusalem</a></li>
+            <li><a (click)="routeDynamically('South')">South</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,142 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.body
+{
+font-family: tahoma;
+background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(http://smile-nehasim.co.il/wp-content/uploads/2017/08/image.jpg);
+background-size: cover;
+background-position: center;
+height: 100vh;
+}
+.logo{
+    margin-left: 30px;
+    float: left;
+    margin-top: 1%;
+    max-width: 100vw;
+  }
+.hero
+{
+  padding-top: 60px;
+    position: fixed;
+    width: 700px;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+}
+.row
+{
+max-width: 100%;
+height: 30px;
+}
+.main-nav{
+  float:center;
+  margin-top: 3%;
+}
+
+.main-nav li{
+  display: inline-block;
+  margin-left: 3%;
+}
+
+.main-nav li a{
+  color: white;
+  text-decoration: none;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.main-nav li :hover{
+  color: #e67e22;
+  border-bottom: 2px solid #e67e22;
+  transition: all 0.1s ease-in;
+  padding: 20px 0;
+}
+.button{
+    height: 40px;
+    width:220px;
+    background-color: transparent;
+    color: #e67e22;
+    border-radius: 8px;
+    border-color: #e67e22;
+    font-size: 20px;
+    margin-top: 12px;
+    float: left;
+    margin-right: 35px;
+    font-weight: bold;
+  }
+  .button:hover{
+    background-color: #e67e22;
+    color: white;
+    font-weight: bold;
+    border-color: white;
+    transition: all 0.1s ease-in;
+  }
+  p{
+    margin-top: 15px;
+    float: left;
+    padding-top: 20px;
+    font-size: 20px;
+    color: white;
+  }
+  .icons{
+    position:absolute;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    display:flex;
+    margin-top: 18px;
+  }
+  
+  .icons li{
+    list-style: none;
+  }
+  
+  .icons li a{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: .5s;
+  }
+  
+  .icons li a .fa{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    line-height: calc(50px - 10px);
+    font-size: 24px;
+    color:white;
+    transition: .5s;
+  }
+  
+  .icons li:nth-child(1) a:hover .fa{
+    color:#3b5998;
+  }
+  .icons li:nth-child(2) a:hover .fa{
+    color:#00aced;
+  }
+  .icons li:nth-child(3) a:hover .fa{
+    color:#dd4b39;
+  }
+  .icons li:nth-child(4) a:hover .fa{
+    color:#007bb6;
+  }
+  .icons li:nth-child(5) a:hover .fa{
+    color:#bc2a8d;
+  }
+  
+  @media screen and (max-width:900px){
+.allicons{
+  display: none;
+}
+.logo{
+  display: none;
+}
+.main-nav{display:none}
+  }
+  

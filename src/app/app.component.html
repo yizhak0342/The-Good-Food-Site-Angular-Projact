@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        h1 {
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            color: #e67e22;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="logo">
+        <img src="http://smile-nehasim.co.il/wp-content/uploads/2017/08/Index_white_logo.png" height="150" width="150">
+    </div>
+    <div class="row">
+        <ul class="main-nav">
+            <li *ngIf="auth.isAuthenticated()"><a routerLink="home">Home</a></li>
+            <li *ngIf="auth.isAuthenticated()"><a routerLink="Top10">TOP 10</a></li>
+            <li *ngIf="auth.isAuthenticated()"><a routerLink="Review">Add Review</a></li>
+            <li *ngIf="auth.isAuthenticated()"><a routerLink="About">About</a></li>
+            <li *ngIf="auth.isAuthenticated()"><a routerLink="Contact">Contact Us</a></li>
+            <li *ngIf="auth.role && auth.isAuthenticated()"><a routerLink="Admin">Admin</a></li>
+            <li *ngIf="auth.isAuthenticated()"><a routerLink="Profile">Profile</a></li>
+            <li *ngIf="auth.isAuthenticated()" (click)="auth.logout()"><a href="logout" style="color:#FA420A">Logout</a></li>
+        </ul>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="hero" *ngIf="!auth.isAuthenticated()">
+        <h1 class="h1home">Welcome to<br>The Good Food Site</h1>
+        <div (click)="auth.login()"><button class="button">Login / Register</button></div>
+        <br><br/><br>
+        <p>Forgot your password? click <span><a href="">here</a></span></p><br/><br/><br/><br/><br/><br/>
+    </div>
+    <!--Social Icons-->
+    <div class="allicons">
+        <ul class="icons">
+            <li><a href="https://www.facebook.com/The-Good-Food-Site-323651678096817/?fref=ts"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/TheGoodFoodSite"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="https://plus.google.com/u/0/117380429130444046871"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

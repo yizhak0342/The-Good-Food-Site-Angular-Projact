@@ -1,0 +1,49 @@
+.iframe{
+    float: right;
+    margin-top: -400px;
+    margin-right: 50px;
+  }
+  .contact-title{
+    margin: auto;
+    margin-left: 42%;
+    color: white;
+    padding-top: 25px;
+    font-size: 45px;
+    font-weight: bold;
+    text-decoration-line: underline;
+  }
+  .contactform{
+    width: 450px;
+    height: 400px;
+    color: black; font-weight: bold;
+    border: 3px solid #329992;
+    padding-left: 15px; 
+    margin-top: 40px;
+    margin-left: 150px;
+    background-color: #28A3BE;
+    text-decoration-line: underline;
+    padding-top: -15px;
+  }
+  input{
+    width: 400px;
+    height: 35px;
+  }
+  textarea{
+    width: 400px;
+    height: 60px;
+  }
+
+  #p{
+    width:400px;
+    height: 35px;
+    text-align: center;
+    padding-top: 5px;
+    color: red;
+    font-weight: bold;
+    border-radius:10px;
+  }
+
+
+  @media screen and (max-width:900px){
+  
+  }    

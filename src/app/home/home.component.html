@@ -1,0 +1,28 @@
+<div *ngIf="auth.isAuthenticated()" class="welcome">
+  <h1 class="h1home">Welcome to<br/><br/><span class="shine">The Good Food Site</span></h1>    
+</div>
+<div *ngIf="auth.isAuthenticated()" class="sideerea">
+  <div class="side-menu">
+          <ul>
+              <li style="font-weight:bold; color:#e67e22; font-size:25px;text-decoration: underline;">Category</li>
+              <li><a (click)="routeDynamically('Italian')"> Italian restaurants</a></li>
+              <li><a (click)="routeDynamically('Meat')">Meat / beef</a></li>
+              <li><a (click)="routeDynamically('Asians')">Asians</a></li>
+              <li><a (click)="routeDynamically('Coffee')">Coffee Houses</a></li>
+              <li><a (click)="routeDynamically('Chef')">Chef Restaurants</a></li>
+              <li><a (click)="routeDynamically('Fish')">Fish & Sea Foods</a></li>
+              <li><a (click)="routeDynamically('Veggies')">Veggies</a></li>
+          </ul>
+      </div>
+      <div class="erea">
+          <ul>
+              <li style="font-weight:bold; color:#e67e22; font-size:25px;text-decoration: underline;">Areas</li>
+              <li><a (click)="routeDynamically('North')">North</a></li>
+              <li><a (click)="routeDynamically('Hasharon')">Hasharon</a></li>
+              <li><a (click)="routeDynamically('Hamerkaz')">Hamerkaz</a></li>
+              <li><a (click)="routeDynamically('Hashfela')">Hashfela</a></li>
+              <li><a (click)="routeDynamically('Jerusalem')">Jerusalem</a></li>
+              <li><a (click)="routeDynamically('South')">South</a></li>
+          </ul>
+      </div>
+  </div>

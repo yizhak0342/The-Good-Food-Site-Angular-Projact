@@ -1,0 +1,173 @@
+<tabset>
+  <tab title="Review List">
+    <div class="DivOfTable">
+      <table class="table table-striped">
+        <tr>
+          <th>Index</th>
+          <th>Restaurant's Name</th>
+          <th>Category</th>
+          <th>Area</th>
+          <th>Review</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+        <tr *ngFor="let item of ArReview; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{item.RestaurantName}}</td>
+          <td>{{item.Category}}</td>
+          <td>{{item.Area}}</td>
+          <td>{{item.Reviews}}</td>
+          <td><i class="glyphicon glyphicon-remove" (click)="GetIndexFromReviewsIcon(item.Id)" data-toggle="modal" data-target="#myModal"></i>
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Delete Restaurant</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>You sure want to delete this restaurant.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    <button (click)="GetIndexToDeleteFromReview()" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td><i class="glyphicon glyphicon-edit"></i></td>
+        </tr>
+      </table>
+    </div>
+  </tab>
+  <tab title="ContactUs" >
+    <div class="DivOfTable">
+      <table class="table table-striped">
+        <tr>
+          <th>Index</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Message</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+        <tr *ngFor="let item of ArContactUs; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{item.Name}}</td>
+          <td>{{item.Email}}</td>
+          <td>{{item.Phone}}</td>
+          <td>{{item.Message}}</td>
+          <td><i class="glyphicon glyphicon-remove" (click)="GetIndexFromContactUsIcon(item.Id)" data-toggle="modal" data-target="#myModal"></i>
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Delete Restaurant</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>You sure want to delete this restaurant.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    <button (click)="GetIndexToDeleteFromContactUs()" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td><i class="glyphicon glyphicon-edit"></i></td>
+        </tr>
+      </table>
+    </div>
+  </tab>
+  <tab title="Restaurant List">
+    <div class="DivOfTable">
+      <table class="table table-striped">
+        <tr>
+          <th>Index</th>
+          <th>Restaurant's Name</th>
+          <th>Area</th>
+          <th>Make reservation</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+        <tr *ngFor="let item of ArRestaurant; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{item.Name}}</td>
+          <td>{{item.Location}}</td>
+          <td><a href="{{item.Reservations}}">Order table</a></td>
+          <td><i class="glyphicon glyphicon-remove" (click)="GetIndexFromRestaurantIcon(item.Id)" data-toggle="modal" data-target="#myModal"></i>
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Delete Restaurant</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>You sure want to delete this restaurant.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    <button (click)="GetIndexToDeleteFromRestaurant()" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td><i class="glyphicon glyphicon-edit"></i></td>
+        </tr>
+      </table>
+    </div>
+  </tab>
+  <tab title="Add Restaurant">
+    <form class="AddRestaurant" #tevForm="ngForm" (ngSubmit)="AddRestaurant(tevForm)">
+      <div class="FormDiv">
+        <h3>Add Restaurant</h3>
+        <div class="form-group">
+          <label for="idName">Name</label><br>
+          <input id="idName" type="text" name="Name" [(ngModel)]="ngName" #trvName="ngModel" class="form-control" required>
+          <div *ngIf="trvName.errors && (trvName.dirty || trvName.touched)" class="alert alert-danger">
+            <div [hidden]="!trvName.errors.required">
+              Name is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="idLocation">Location</label><br>
+          <input id="idLocation" type="text" name="LocationName" [(ngModel)]="ngLocation" #trvLocation="ngModel" class="form-control"
+            required>
+          <div *ngIf="trvLocation.errors && (trvLocation.dirty || trvLocation.touched)" class="alert alert-danger">
+            <div [hidden]="!trvLocation.errors.required">
+              Location is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="idCategory">Category</label><br>
+          <input id="idCategory" type="text" name="CategoryName" [(ngModel)]="ngCategory" #trvCategory="ngModel" class="form-control"
+            required>
+          <div *ngIf="trvCategory.errors && (trvCategory.dirty || trvCategory.touched)" class="alert alert-danger">
+            <div [hidden]="!trvCategory.errors.required">
+              Category is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="idReservations">Reservations</label><br>
+          <textarea id="idReservations" type="text" name="ReservationsName" [(ngModel)]="ngReservations" #trvReservations="ngModel"
+            class="form-control" required></textarea>
+          <div *ngIf="trvReservations.errors && (trvReservations.dirty || trvReservations.touched)" class="alert alert-danger">
+            <div [hidden]="!trvReservations.errors.required">
+              Reservations is required
+            </div>
+          </div>
+        </div>
+        <button class="BTN">Add Review</button>
+      </div>
+    </form>
+  </tab>
+</tabset>

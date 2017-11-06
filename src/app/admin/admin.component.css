@@ -1,0 +1,52 @@
+.DivOfTable{
+    height: 300px;
+    width: 50%;
+    color: red;
+    border: 1px solid white;
+    overflow: scroll;
+    margin-top: 50px;
+    margin-left: 291px;
+}
+.AddRestaurant{
+position: absolute;
+margin-top: 41px;
+width: 500px;
+height: 60%;
+color: white;
+border-radius: 15px;
+border: 1px solid white;
+margin-left: 500px;
+margin-left: 428px;
+}
+.BTN{
+    width: 100px;
+    background-color: cornflowerblue;
+    border-radius: 11px;
+    height: 34px;
+    float: right;
+}
+.FormDiv{
+    width: 450px;
+    margin-left: 20px;
+}
+#stars span{
+    float: left;
+    font-size: 35px;
+    padding: 8px;
+    color: yellow;
+    padding-top: 0px;
+  }
+  .div1{
+    border: 1px solid red;
+    width: 500px;
+  }
+  .OpenTable{
+    height: 40px;
+    width: 114px;
+    border: 1px solid;
+    border-radius: 25px;
+  }
+  .DeleteButton{
+      height: 10px;
+      width: 15px;
+  }

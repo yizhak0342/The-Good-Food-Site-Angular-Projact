@@ -1,0 +1,44 @@
+<div>
+    <div> 
+        <h3 class="contact-title">Contact Us</h3>
+    </div>
+    <div>   
+        <div class="contactform">
+            <p style="text-decoration-line:underline; font-size:30px; color:white">Write us</p>
+            <form #trvForm="ngForm" (ngSubmit)="AddUserMessage()">
+                <input id="idName" name="Name" type="text" class="form-control" required placeholder="Name" [(ngModel)]="Name" #trvName="ngModel"><br/>
+                <div id="p" *ngIf="trvName.errors && (trvName.dirty || trvName.touched)"
+                class="alert alert-danger">
+                <p [hidden]="!trvName.errors.required">
+                Please fill in your name
+                </p>
+                </div>
+                <input type="email" [(ngModel)]="ngEmail" name="Email" placeholder="Email" required #trvEmail="ngModel"><br/><br/>
+                <div id="p" *ngIf="trvEmail.errors && (trvEmail.dirty || trvEmail.touched)"
+                class="alert alert-danger">
+                <p [hidden]="!trvEmail.errors.required">
+                Please fill in your Email
+                </p>
+                </div>
+                <input type="number" [(ngModel)]="ngPhoneNumber" name="PhoneNumber" placeholder="Phone Number" required #trvNumber="ngModel"><br><br>
+                <div id="p" *ngIf="trvNumber.errors && (trvNumber.dirty || trvNumber.touched)"
+                class="alert alert-danger">
+                <p [hidden]="!trvNumber.errors.required">
+                Please fill in your Phone number
+                </p>
+                </div>
+                <textarea [(ngModel)]="ngMessage" name="Message" cols="40" rows="5" placeholder="Message..." required #trvText="ngModel"></textarea><br><br>
+                <div id="p" *ngIf="trvText.errors && (trvText.dirty || trvText.touched)"
+                class="alert alert-danger">
+                <p [hidden]="!trvText.errors.required">
+                Please write your review
+                </p>
+                </div>
+                <button type="submit" value="Submit" [disabled]="!trvForm.valid">Submit</button>
+            </form> 
+        </div>        
+        <div class="iframe">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.3112909469105!2d34.89303688533487!3d31.95245068122884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502ca5925736e95%3A0xc5c5043db367e9c0!2z15jXnNeo15M!5e0!3m2!1siw!2sil!4v1504131217265" width="500" height="400" frameborder="4" style="border:4" allowfullscreen></iframe>
+        </div>
+    </div>	
+</div>
